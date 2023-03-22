@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdminlandingComponent } from './adminlanding/adminlanding.component';
+import { SharedmoduleModule } from '../sharedmodule/sharedmodule.module';
+
 
 
 
 @NgModule({
   declarations: [
-    AdminlandingComponent
+    AdminlandingComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    // SharedmoduleModule
   ]
 })
 export class AdminmoduleModule { }
