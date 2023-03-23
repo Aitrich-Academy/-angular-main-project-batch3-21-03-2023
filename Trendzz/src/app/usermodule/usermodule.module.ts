@@ -10,6 +10,9 @@ import { UserlandingComponent } from './userlanding/userlanding.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    UserlandingComponent
   ]
 })
 export class UsermoduleModule { }
