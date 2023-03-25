@@ -20,7 +20,7 @@
             <button class="btn btn-light cat">Product Category</button>
         </div>
     </div>
-    <div class="row">
+    <div class="row"> 
         <div class="col-md-2"><img src="../../../assets/images/image 12.png" alt="" srcset="" class="img-fluid"><button class="btn pro">Skin Care</button></div>
         <div class="col-md-2"><img src="../../../assets/images/image 12-1.png" alt="" srcset="" class="img-fluid"><button class="btn pro">Laptops & PC</button></div>
         <div class="col-md-2"><img src="../../../assets/images/image 12.5.png" alt="" srcset="" class="img-fluid"><button class="btn pro">Smartphones</button></div>
@@ -48,18 +48,18 @@
     </div>
 </section>
 <section>
-    <div class="container-fluid">
-    <div class="row">
-        <div class="col">
-            <div class="card" style="width: 15rem;">
-  <img src="../../../assets/images/Rectangle 5.png" class="card-img-top" alt="...">
+    <div class="container mt-5">
+    <div class="row" >
+        <div class="col-md-3" *ngFor="let carddata of data ">
+            <div class="card" style="width: 15rem;" >
+  <img src={{carddata.productImage}} class="card-img-top" alt="...">
   <div class="card-body">
-    <h6 class="card-title title1">Laptop & PC</h6>
-    <h5 class="card-title">ASUS X441UV</h5>
-    <p class="card-text">consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....</p>
+    <h6 class="card-title title1">{{carddata.category}}</h6>
+    <h5 class="card-title">{{carddata.productName}}</h5>
+    <p class="card-text">{{carddata.productDesc}}</p>
     <div class="row">
             <div class="col">
-                 <h4>$ 2,800</h4>
+                 <h4>{{carddata.amount | currency : 'USD' : true : '2.0'}}</h4>
             </div>
         <div class="col">
             <a href="#" class="btn buy ">Buy &nbsp; <img src="../../../assets/images/bag-plus 1.png"></a>
@@ -68,139 +68,8 @@
   </div>
 </div>
 </div>
-        <div class="col">
-            <div class="card" style="width: 15rem;">
-  <img src="../../../assets/images/Rectangle 5-1.png" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h6 class="card-title title1">Smartphones</h6>
-    <h5 class="card-title">Iphone 14</h5>
-    <p class="card-text"> consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....</p>
-    <div class="row">
-        <div class="col">
-            <h4>$ 588</h4>
-        </div>
-        <div class="col">
-            <a href="#" class="btn buy">Buy &nbsp; <img src="../../../assets/images/bag-plus 1.png"></a>
-        </div>
-    </div>
-  </div>
-</div>
-</div>
-        <div class="col">
-            <div class="card" style="width: 15rem;">
-  <img src="../../../assets/images/Laptop.png" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h6 class="card-title title1">Laptop & PC</h6>
-    <h5 class="card-title">ASUS ZENBOOK C103</h5>
-    <p class="card-text">consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....</p>
-    <div class="row">
-        <div class="col">
-            <h4>$ 800</h4>
-        </div>
-        <div class="col">
-            <a href="#" class="btn buy">Buy &nbsp; <img src="../../../assets/images/bag-plus 1.png"></a>
-        </div>
-    </div>
-  </div>
-</div>
-</div>
-        <div class="col">
-            <div class="card" style="width: 15rem;">
-  <img src="../../../assets/images/Rectangle 5-2.png" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h6 class="card-title title1">Smartphones</h6>
-    <h5 class="card-title">SAMSUNG 4531</h5>
-    <p class="card-text">consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....</p>
-    <div class="row">
-        <div class="col">
-            <h4>$ 3,000</h4>
-        </div>
-        <div class="col">
-            <a href="#" class="btn buy">Buy &nbsp; <img src="../../../assets/images/bag-plus 1.png"></a>
-        </div>
-    </div>
-  </div>
-</div>
-</div>
     </div>
 </div>
-    <div class="container-fluid mt-5">
-        <div class="row">
-            <div class="col">
-                <div class="card" style="width: 15rem;">
-      <img src="../../../assets/images/Rectangle 5 (7).png" class="card-img-top ima" alt="...">
-      <div class="card-body">
-        <h6 class="card-title title1">Fashion</h6>
-        <h5 class="card-title">BAJU WANITA SIMPLE</h5>
-        <p class="card-text">consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....</p>
-        <div class="row">
-            <div class="col">
-                <h4>$ 888</h4>
-            </div>
-            <div class="col">
-                <a href="#" class="btn buy">Buy &nbsp; <img src="../../../assets/images/bag-plus 1.png"></a>
-            </div>
-        </div>
-      </div>
-    </div>
-    </div>
-            <div class="col">
-                <div class="card" style="width: 15rem;">
-      <img src="../../../assets/images/Rectangle 5 (6).png" class="card-img-top " alt="...">
-      <div class="card-body">
-        <h6 class="card-title title1">Fashion</h6>
-        <h5 class="card-title">Tas Kece</h5>
-        <p class="card-text">consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....</p>
-        <div class="row">
-            <div class="col">
-                <h4>$ 4,800</h4>
-            </div>
-            <div class="col">
-                <a href="#" class="btn buy">Buy &nbsp; <img src="../../../assets/images/bag-plus 1.png"></a>
-            </div>
-        </div>
-      </div>
-    </div>
-    </div>
-            <div class="col">
-                <div class="card" style="width: 15rem;">
-      <img src="../../../assets/images/Rectangle 5-4.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h6 class="card-title title1">Electronics</h6>
-        <h5 class="card-title">Pemberish Hidung</h5>
-        <p class="card-text">consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....</p>
-        <div class="row">
-            <div class="col">
-                <h4>$ 2,500</h4>
-            </div>
-            <div class="col">
-                <a href="#" class="btn buy">Buy &nbsp; <img src="../../../assets/images/bag-plus 1.png"></a>
-            </div>
-        </div>
-      </div>
-    </div>
-    </div>
-            <div class="col">
-                <div class="card" style="width: 15rem;">
-      <img src="../../../assets/images/Rectangle 5-3.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h6 class="card-title title1">Accessories</h6>
-        <h5 class="card-title">Kable Data Type C</h5>
-        <p class="card-text">consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo.....</p>
-        <div class="row">
-            <div class="col">
-                <h4>$ 3,300</h4>
-            </div>
-            <div class="col">
-                <a href="#" class="btn buy">Buy &nbsp; <img src="../../../assets/images/bag-plus 1.png"></a>        
-            </div>
-        </div>
-      </div>
-    </div>
-    </div>
-        </div>
-        </div>
-
 </section>
 <footer>
     <div class="container">
