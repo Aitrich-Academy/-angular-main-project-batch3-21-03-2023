@@ -3,7 +3,9 @@ import { CommonModule } from '@angular/common';
 import { UserlandingComponent } from './userlanding/userlanding.component';
 import { FormsModule } from '@angular/forms';
 import { UserlandingRoutingModule } from './userlanding-routing.module';
+
 import { ProductplaceorderComponent } from './productplaceorder/productplaceorder.component';
+
 import { SharedmoduleModule } from '../sharedmodule/sharedmodule.module';
 
 
@@ -12,7 +14,9 @@ import { SharedmoduleModule } from '../sharedmodule/sharedmodule.module';
 @NgModule({
   declarations: [
     UserlandingComponent,
+
     ProductplaceorderComponent
+
    
    
   ],
@@ -20,12 +24,14 @@ import { SharedmoduleModule } from '../sharedmodule/sharedmodule.module';
     CommonModule,
     FormsModule,
     UserlandingRoutingModule,
+
     SharedmoduleModule,
     
   ],
   exports: [
     UserlandingComponent,
     ProductplaceorderComponent
+
   ]
 })
 export class UsermoduleModule { }

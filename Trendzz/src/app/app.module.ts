@@ -9,12 +9,18 @@ import { NavbarComponent } from './sharedmodule/navbar/navbar.component';
 import { SharedmoduleModule } from './sharedmodule/sharedmodule.module';
 import { UserlandingRoutingModule } from './usermodule/userlanding-routing.module';
 
+
 import { UserhomeComponent } from './userhome/userhome.component';
+
+import { UsermoduleModule } from './usermodule/usermodule.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+
     UserhomeComponent,
+
 
     
   ],
