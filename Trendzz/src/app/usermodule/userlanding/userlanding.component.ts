@@ -8,7 +8,7 @@ import { cardData } from './data';
 })
 export class UserlandingComponent implements OnInit { 
 
-  data : cardData[] = [ {
+  data : cardData[] = [{
     productImage : '../../../assets/images/Rectangle 5.png',
     category: 'Laptop & PC',
     productName: 'ASUS X441UV',
@@ -72,10 +72,6 @@ export class UserlandingComponent implements OnInit {
     amount:  3300,
   }
 
-  
-
-
-
   ]
 
   constructor(){}
@@ -83,8 +79,5 @@ export class UserlandingComponent implements OnInit {
   ngOnInit(): void {
       
   }
-
-
-
 
 }
