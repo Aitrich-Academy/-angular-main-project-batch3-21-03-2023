@@ -42,6 +42,15 @@ a:hover::after{
 a:hover{
     color: #4cb96d;
 }
+.modal-content{
+    background-color: #78B689;
+    
+    
+}
+.modal-header,.modal-footer{
+    border: 0;
+
+}
 
 
 
