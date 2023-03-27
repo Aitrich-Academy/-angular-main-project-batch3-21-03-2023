@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserlandingComponent } from './userlanding/userlanding.component';
-import { OrdershippingComponent } from './ordershipping/ordershipping.component';
+import { FormsModule } from '@angular/forms';
+import { UserlandingRoutingModule } from './userlanding-routing.module';
 import { ProductplaceorderComponent } from './productplaceorder/productplaceorder.component';
-import { UserprofileComponent } from './userprofile/userprofile.component';
+import { SharedmoduleModule } from '../sharedmodule/sharedmodule.module';
 
 
 
@@ -11,20 +12,20 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
 @NgModule({
   declarations: [
     UserlandingComponent,
-    OrdershippingComponent,
-    ProductplaceorderComponent,
-    UserprofileComponent
+    ProductplaceorderComponent
+   
+   
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    UserlandingRoutingModule,
+    SharedmoduleModule,
     
-  
   ],
-  exports:[
+  exports: [
     UserlandingComponent,
-    OrdershippingComponent,
-    ProductplaceorderComponent,
-    UserprofileComponent
+    ProductplaceorderComponent
   ]
 })
 export class UsermoduleModule { }

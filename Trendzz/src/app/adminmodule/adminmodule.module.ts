@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdminlandingComponent } from './adminlanding/adminlanding.component';
 import { SharedmoduleModule } from '../sharedmodule/sharedmodule.module';
+import { AdminroutingModule } from './adminrouting.module';
 
 
 
@@ -14,7 +15,8 @@ import { SharedmoduleModule } from '../sharedmodule/sharedmodule.module';
   imports: [
     CommonModule,
  
-     SharedmoduleModule
+     SharedmoduleModule,
+        AdminroutingModule
   ]
 })
 export class AdminmoduleModule { }

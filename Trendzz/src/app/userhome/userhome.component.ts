@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { cardData } from './data';
+import { cardData } from '../class/userdata';
 
 @Component({
-  selector: 'app-userlanding',
-  templateUrl: './userlanding.component.html',
-  styleUrls: ['./userlanding.component.css']
+  selector: 'app-userhome',
+  templateUrl: './userhome.component.html',
+  styleUrls: ['./userhome.component.css']
 })
-export class UserlandingComponent implements OnInit { 
-
+export class UserhomeComponent implements OnInit{
   data : cardData[] = [{
     productImage : '../../../assets/images/Rectangle 5.png',
     category: 'Laptop & PC',
@@ -81,3 +80,4 @@ export class UserlandingComponent implements OnInit {
   }
 
 }
+
