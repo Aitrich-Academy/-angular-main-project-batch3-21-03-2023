@@ -6,13 +6,15 @@ import { SharedmoduleModule } from '../sharedmodule/sharedmodule.module';
 
 
 
+
 @NgModule({
   declarations: [
     AdminlandingComponent,
   ],
   imports: [
     CommonModule,
-    // SharedmoduleModule
+ 
+     SharedmoduleModule
   ]
 })
 export class AdminmoduleModule { }

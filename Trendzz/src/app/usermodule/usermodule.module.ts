@@ -7,6 +7,7 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
 
 
 
+
 @NgModule({
   declarations: [
     UserlandingComponent,
@@ -15,7 +16,9 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
     UserprofileComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    
+  
   ],
   exports:[
     UserlandingComponent,
