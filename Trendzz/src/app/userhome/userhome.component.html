@@ -3,13 +3,13 @@
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="../../../assets/images/Frame 6.png" class="d-block w-100" alt="...">
+            <img src="../../../assets/images/Frame 6.png" class="d-block w-100">
           </div>
           <div class="carousel-item">
-            <img src="../../../assets/images/banner1.1.jpg" class="d-block w-100" alt="...">
+            <img src="../../../assets/images/banner1.1.jpg" class="d-block w-100">
           </div>
           <div class="carousel-item">
-            <img src="../../../assets/images/banner1.2.jpg" class="d-block w-100" alt="...">
+            <img src="../../../assets/images/banner1.2.jpg" class="d-block w-100">
           </div>
         </div>
       </div>
@@ -21,17 +21,20 @@
             <button class="btn btn-light cat">Product Category</button>
         </div>
     </div>
-    <div class="row"> 
-        <div class="col-md-2"><img src="../../../assets/images/image 12.png" alt="" srcset="" class="img-fluid"><button class="btn pro">Skin Care</button></div>
-        <div class="col-md-2"><img src="../../../assets/images/image 12-1.png" alt="" srcset="" class="img-fluid"><button class="btn pro">Laptops & PC</button></div>
-        <div class="col-md-2"><img src="../../../assets/images/image 12.5.png" alt="" srcset="" class="img-fluid"><button class="btn pro">Smartphones</button></div>
-        <div class="col-md-2"><img src="../../../assets/images/image 12-2.png" alt="" srcset="" class="img-fluid"><button class="btn pro">Fashion</button></div>
-        <div class="col-md-2"><img src="../../../assets/images/image 12-3.png" alt="" srcset="" class="img-fluid"><button class="btn pro">Electronics</button></div>
-        <div class="col-md-2"><img src="../../../assets/images/image 12.6.png" alt="" srcset="" class="img-fluid"><button class="btn pro">Lifestyle</button></div>
+    <!-- <button class="pre-btn"><img src="../../assets/images/right-rrow.png" alt=""></button>
+    <button class="nxt-btn"><img src="../../assets/images/right-rrow.png" alt=""></button> -->
+    <div class="row product-container"> 
+    <div class="col-md-2" *ngFor="let item of categoryData">
+        <div class="card">
+          <img src={{item.image}} class="card-img-top category" alt="...">
+          <div class="card-body">
+            <a href="#" class="btn btn pro">{{item.category}}</a>
+          </div>
+        </div>
     </div>
-</div> 
-     
-</section>      
+  </div>
+</div>
+</section>
 <section>
     <div class="text-center mt-2">
         <h1 class="all-products">All Products</h1>
@@ -40,10 +43,9 @@
                 <div class="row">
                     <div class="col-xs-3">
             <div class="input-group mb-3">
-              <input type="text" class="form-control input-sm" placeholder="search something.." aria-label="Recipient's username" aria-describedby="button-addon2" size=20>
+              <input type="text" class="form-control input-sm " placeholder="search something.." aria-label="Recipient's username" aria-describedby="button-addon2" size=20>
               <button class="btn search" type="button" id="button-addon2">Search</button>
             </div>
-
         </div>
       </div>
     </div>
@@ -72,6 +74,22 @@
     </div>
 </div>
 </section>
-
 <app-footer></app-footer>
+<script type="text/javascript">
+const productContainer = [...document.querySelectorAll('.product-container')];
+const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+const preBtn = [...document.querySelectorAll('.pre-btn')];
 
+productContainer.forEach((item , i)=> {
+    let containerDimension = item.getBoundingClientRect();
+    let containerWidth = containerDimension.width;
+
+    nxtBtn[i].addEventListener('click' , ()=> {
+        item.scrollLeft += containerWidth;
+        
+    })
+    preBtn[i].addEventListener('click' , ()=> {
+        item.scrollLeft -= containerWidth;
+    })
+})
+</script>
