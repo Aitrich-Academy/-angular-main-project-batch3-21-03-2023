@@ -7,6 +7,10 @@ import { UserlandingRoutingModule } from './userlanding-routing.module';
 import { ProductplaceorderComponent } from './productplaceorder/productplaceorder.component';
 
 import { SharedmoduleModule } from '../sharedmodule/sharedmodule.module';
+import { OrdershippingComponent } from './ordershipping/ordershipping.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
+import { MyordersComponent } from './myorders/myorders.component';
+import { UserorderhistoryComponent } from './userorderhistory/userorderhistory.component';
 
 
 
@@ -15,7 +19,11 @@ import { SharedmoduleModule } from '../sharedmodule/sharedmodule.module';
   declarations: [
     UserlandingComponent,
 
-    ProductplaceorderComponent
+    ProductplaceorderComponent,
+    OrdershippingComponent,
+    UserprofileComponent,
+    MyordersComponent,
+    UserorderhistoryComponent
 
    
    
@@ -28,9 +36,15 @@ import { SharedmoduleModule } from '../sharedmodule/sharedmodule.module';
     SharedmoduleModule,
     
   ],
+  
   exports: [
     UserlandingComponent,
-    ProductplaceorderComponent
+
+    ProductplaceorderComponent,
+    OrdershippingComponent,
+    UserprofileComponent,
+    MyordersComponent,
+    UserorderhistoryComponent
 
   ]
 })

@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+
 import { ProductInfoService } from '../services/product-info.service';
 import { cardData } from '../class/userData';
 import { CategoryService } from '../services/category.service';
 import { Category } from '../class/category';
+
+
+
 
 @Component({
   selector: 'app-userhome',
@@ -10,6 +14,7 @@ import { Category } from '../class/category';
   styleUrls: ['./userhome.component.css']
 })
 export class UserhomeComponent implements OnInit{
+
 
   data: cardData[] = [];
   categoryData : Category[] =[];
@@ -20,6 +25,7 @@ export class UserhomeComponent implements OnInit{
   ngOnInit(): void {
      this.data = this.info.productInfo();
      this.categoryData = this.category.getCategory()
+
   }
 
 }

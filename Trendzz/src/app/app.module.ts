@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+
 import { BrowserModule } from '@angular/platform-browser';
 import {UsermoduleModule}from './usermodule/usermodule.module';
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +14,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,13 +22,18 @@ import { NotFoundComponent } from './not-found/not-found.component';
     NotFoundComponent,
 
 
+
+
     
   ],
   imports: [
     BrowserModule,
     UserlandingRoutingModule,
+    UserlandingRoutingModule,
     AppRoutingModule,
     SharedmoduleModule,
+   
+    FormsModule,  
     UsermoduleModule,
     FormsModule, 
     AdminmoduleModule 
