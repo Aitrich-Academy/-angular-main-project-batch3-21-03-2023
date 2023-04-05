@@ -2,10 +2,27 @@
 {
     margin-top: 100px;
 }
+.fs{
+    font-size: small;
+}
 .pobtn
 {
     width: 220px;
     height:40px;
    
 
+}
+.tabfontsiz
+{
+    font-size: 14px;
+    color:rgb(66, 66, 66)
+}
+.return-policy
+{
+    font-size: smaller;
+}
+.icon-f
+{
+    color:rgb(253, 252, 252);
+    background-color: grey;
 }
