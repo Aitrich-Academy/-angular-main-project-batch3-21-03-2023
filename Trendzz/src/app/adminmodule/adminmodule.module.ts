@@ -16,12 +16,11 @@ import { AdminUserprofileComponent } from './admin-userprofile/admin-userprofile
   ],
   imports: [
     CommonModule,
- 
      SharedmoduleModule,
-        AdminroutingModule
+      AdminroutingModule
   ],
   exports:[
-    AdminUserprofileComponent
+    
   ]
 })
 export class AdminmoduleModule { }
