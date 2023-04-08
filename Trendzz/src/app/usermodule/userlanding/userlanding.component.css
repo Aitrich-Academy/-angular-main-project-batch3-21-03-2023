@@ -77,5 +77,24 @@ input[type=text]:focus {
 .card-title,h4{
     font-weight: bold;
 }
-
-
+footer{
+    background-color: #4cb96d;
+}
+.cpr ,table{
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    
+}
+td{
+    color: #D3D3D3;
+}
+table,tr,td,th{
+    border: none;
+}
+.vl {
+    border-left: 1px solid rgb(139, 131, 131);
+    height: 100px;
+    position:absolute;
+    left: 50%;
+    top: 1500px;
+  }
