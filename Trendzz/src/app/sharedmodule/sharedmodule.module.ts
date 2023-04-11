@@ -2,20 +2,28 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AdminnavbarComponent } from './adminnavbar/adminnavbar.component';
+import { RouterModule } from '@angular/router';
+import { SharedroutingModule } from './sharedrouting.module';
+
 
 
 
 @NgModule({
   declarations: [
     NavbarComponent,
-    AdminnavbarComponent
+    AdminnavbarComponent,
+ 
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedroutingModule
+    
   ],
   exports: [
     NavbarComponent,
-    AdminnavbarComponent
+    AdminnavbarComponent,
+    RouterModule,
+  
   ]
 })
 export class SharedmoduleModule { }

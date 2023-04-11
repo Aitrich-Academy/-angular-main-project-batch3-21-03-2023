@@ -5,8 +5,11 @@ import { SharedmoduleModule } from '../sharedmodule/sharedmodule.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AdmincategoryComponent } from './admincategory/admincategory.component';
 import { AdminordersComponent } from './adminorders/adminorders.component';
-import { NgxPaginationModule } from 'ngx-pagination';
+import { UpdatecategoryComponent } from './updatecategory/updatecategory.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AdminroutingModule } from './adminrouting.module';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -17,23 +20,25 @@ import { ReactiveFormsModule } from '@angular/forms';
     AdminlandingComponent,
     AdmincategoryComponent,
     AdminordersComponent,
+    UpdatecategoryComponent
   ],
   imports: [
 
     CommonModule,
-    SharedmoduleModule ,
+    SharedmoduleModule,
     HttpClientModule,
-    NgxPaginationModule, 
-    ReactiveFormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    AdminroutingModule
   ],
-  exports:[
+  exports: [
     AdminlandingComponent,
-    NgxPaginationModule,
     AdmincategoryComponent,
-    AdminordersComponent
+    AdminordersComponent,
+    RouterModule
 
-    
-    
+
+
 
   ]
 

@@ -36,22 +36,22 @@ export class AdminserviceService  {
    
     }
 
-//  updateData(data:any,id:number){
-//   return this.http.put('${this.apiUrl}/products' +id ,data).pipe(map((res:any)=>
-//   {
-//     return res;
-//   }))
-// }
+ updateData(data:ItemsCategory,id:ItemsCategory){
+  return this.http.put(`${this.apiUrl}/`+id,data)
+  
+}
 
 deleteData(id:ItemsCategory): Observable<any>{
   return this.http.delete(`${this.apiUrl}/`+id );
  
 }
+fetchdata(id:ItemsCategory): Observable<any>{
+  return this.http.get(`${this.apiUrl}/`+id );
 }
 
  
   
-
+}
 
   
 
