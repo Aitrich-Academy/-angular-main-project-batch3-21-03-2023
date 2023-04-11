@@ -1,57 +1,19 @@
 {
-  "products": [
+  "posts": [
     {
       "id": 1,
-      "image": "assets/images/image 12.png",
-      "name": "Product 1",
-      "category": "laptop",
-      "stockquantity": "100",
-      "price": "10.00",
-      "description": "Skin Care"
+      "title": "json-server",
+      "author": "typicode"
     }
   ],
-  "categories": [
+  "comments": [
     {
-      "categoryname": "Lenova laptop",
-      "categorydiscription": "32gb ram",
-      "categoryimage": "./assets/images/image 12-1.png",
-      "id": 8
-    },
-    {
-      "categoryname": "acer",
-      "categorydiscription": "32 gb ram",
-      "categoryimage": "./assets/images/image 12-1.png",
-      "id": 10
-    },
-    {
-      "id": 11,
-      "categoryname": "laptop",
-      "categorydiscription": "2gb ram",
-      "categoryimage": "./assets/images/Rectangle 5.png"
-    },
-    {
-      "id": 12,
-      "categoryname": "m",
-      "categorydiscription": "2gb ram",
-      "categoryimage": "./assets/images/image 12-2.png"
-    },
-    {
-      "id": 13,
-      "categoryname": "modern wear",
-      "categorydiscription": "xxl size,ladies",
-      "categoryimage": ""
-    },
-    {
-      "id": 14,
-      "categoryname": "modern wear",
-      "categorydiscription": "xxl size,ladies",
-      "categoryimage": ""
-    },
-    {
-      "id": 15,
-      "categoryname": "smart phone",
-      "categorydiscription": "64gb ram",
-      "categoryimage": "./assets/images/Rectangle 5-1.png"
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
     }
-  ]
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }
