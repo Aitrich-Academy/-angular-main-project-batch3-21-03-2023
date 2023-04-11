@@ -19,7 +19,7 @@
     },
     {
       "categoryname": "acer",
-      "categorydiscription": "32 gb ram",
+      "categorydiscription": "32 gb ",
       "categoryimage": "./assets/images/image 12-1.png",
       "id": 10
     },
@@ -27,31 +27,37 @@
       "id": 11,
       "categoryname": "laptop",
       "categorydiscription": "2gb ram",
-      "categoryimage": "./assets/images/Rectangle 5.png"
+      "categoryimage": "C:\\fakepath\\image 12.6.png"
     },
     {
       "id": 12,
-      "categoryname": "m",
+      "categoryname": "Lenovo lap",
       "categorydiscription": "2gb ram",
       "categoryimage": "./assets/images/image 12-2.png"
     },
     {
       "id": 13,
-      "categoryname": "modern wear",
-      "categorydiscription": "xxl size,ladies",
-      "categoryimage": ""
-    },
-    {
-      "id": 14,
-      "categoryname": "modern wear",
-      "categorydiscription": "xxl size,ladies",
+      "categoryname": "aaaaaaaaa",
+      "categorydiscription": "aaaaaaaaaaa",
       "categoryimage": ""
     },
     {
       "id": 15,
-      "categoryname": "smart phone",
-      "categorydiscription": "64gb ram",
-      "categoryimage": "./assets/images/Rectangle 5-1.png"
+      "categoryname": "aa",
+      "categorydiscription": "aaaaa",
+      "categoryimage": ""
+    },
+    {
+      "id": 16,
+      "categoryname": "aaaaa",
+      "categorydiscription": "aaaaaaaa",
+      "categoryimage": ""
+    },
+    {
+      "id": 17,
+      "categoryname": "laptop",
+      "categorydiscription": ",,,,ood",
+      "categoryimage": "C:\\fakepath\\image 12.png"
     }
   ]
 }
