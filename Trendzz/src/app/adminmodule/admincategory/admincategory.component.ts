@@ -3,43 +3,36 @@ import { Items } from '../modals/items';
 import { AdminserviceService } from '../adminservice.service';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { FormGroup,FormBuilder } from  '@angular/forms'
-import { ItemsCategory } from './itemsmodal';
+import { FormGroup,FormBuilder,Validators } from  '@angular/forms'
+import { ItemsCategory } from '../adminlanding/itemsmodal';
+import { Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-adminlanding',
-  templateUrl: './adminlanding.component.html',
-  styleUrls: ['./adminlanding.component.css']
+  selector: 'app-admincategory',
+  templateUrl: './admincategory.component.html',
+  styleUrls: ['./admincategory.component.css']
 })
-export class AdminlandingComponent implements OnInit  {
- 
- items:Items[]=[
-
-  ]
-    // forms validation
-   
- 
-  constructor(public elements:AdminserviceService,private http: HttpClient,private fb:FormBuilder){
-    this.elements.getItems
+export class AdmincategoryComponent {
+  constructor(public elements:AdminserviceService,private http: HttpClient,private fb:FormBuilder,private router: Router){
+  
   }
-
+  
   formValue!:FormGroup;
   categoryobj:ItemsCategory=new ItemsCategory();
 
-
-  ngOnInit():void
+  ngOnInit()
 {
 
-  this.loadData(this.currentPage);
-  
-  this.formValue = this.fb.group<any>
-  ({
-    categoryname:[''],
-    categorydiscription:[''],
-    categoryimage:['']
-  })
- 
+ this.loadData(this.currentPage);
+ this.formValue = this.fb.group
+ ({
+  id:[''],
+   categoryname:['',Validators.required],
+   categorydiscription:['',Validators.required],
+   categoryimage:['',Validators.required]
+ })
+
 
 }
 imageSrc:any="";
@@ -62,12 +55,11 @@ imageSrc:any="";
     };
     reader.readAsDataURL(file);
   }
- 
 
-  data: any[] = [];
+  data:ItemsCategory[]=[];
   totalItems:number = 0;
   currentPage:number= 1;
-  itemsPerPage:number = 6;
+  itemsPerPage:number = 15;
 
 
   
@@ -77,19 +69,28 @@ imageSrc:any="";
       this.totalItems = response.length;
     });
   }
-
-
   addItems(data:ItemsCategory){
-    // this.categoryobj.categoryname=this.formValue.value.categoryname;
-    // this.categoryobj. categorydiscription=this.formValue.value. categorydiscription;
-    // this.categoryobj.categoryimage=this.formValue.value.categoryimage;
-    // console.log(this.categoryobj);
-    this.elements.addData(data).subscribe((response: any) => {
- this.formValue.reset();
-    })
+    /*this.categoryobj.categoryname=this.formValue.value.categoryname;
+    this.categoryobj. categorydiscription=this.formValue.value. categorydiscription;
+    this.categoryobj.categoryimage=this.formValue.value.categoryimage;
+    console.log(this.categoryobj);*/
+    console.log(data);
+    this.elements.addData(data).subscribe((res:any)=> {
+      this.loadData(this.currentPage);
+    
+    
+      }); this.formValue.reset();
+  }
+  deleteItem(data:any){
+    this.elements.deleteData(data).subscribe((res:any)=> {
     this.loadData(this.currentPage);
-    }
+    }),
+    console.error();
+  }
   
+
+
+    
 
  /* onPageChange(page: number) {
     this.currentPage = page;
@@ -114,7 +115,6 @@ imageSrc:any="";
   }
 }
 
-
 }
 
 // getData() {
@@ -132,16 +132,4 @@ imageSrc:any="";
 
 // }
 
-
-
-
-
-
-
-
-
-
-
-
-  
 

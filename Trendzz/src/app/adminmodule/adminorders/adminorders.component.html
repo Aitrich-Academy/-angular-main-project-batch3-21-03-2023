@@ -1,0 +1,55 @@
+<div class="container-fluid" style="width:100%;height:90rem;background-color:pink">
+
+    <br>
+    <app-adminnavbar></app-adminnavbar>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+        <table class="table border bg-light" style="border: 1px solid gray;">
+          <thead>
+            <tr >
+              <th scope="col"><small style="color:darkgray"> Product image</small>  <i style="color:darkgray;" class="fa-solid fa-arrow-down-long"></i></th>
+              <th scope="col"><small style="color:darkgray"> Name</small>  <i style="color:darkgray;" class="fa-solid fa-arrow-down-long"></i></th>
+              <th scope="col"><small style="color:darkgray"> No.of items</small>  <i style="color:darkgray;" class="fa-solid fa-arrow-down-long"></i></th>
+              <th scope="col"><small style="color:darkgray"> Total Price</small>  <i style="color:darkgray;" class="fa-solid fa-arrow-down-long"></i></th>
+              <th scope="col"><small style="color:darkgray"> User</small>  <i style="color:darkgray;" class="fa-solid fa-arrow-down-long"></i></th>
+              <th scope="col"><small style="color:darkgray"> Order Status</small>  <i style="color:darkgray;" class="fa-solid fa-arrow-down-long"></i></th> &nbsp;
+              <th scope="col"><small style="color:darkgray"> Accept</small>  <i style="color:darkgray;" class="fa-solid fa-arrow-down-long"></i></th>
+              <th scope="col"><small style="color:darkgray"> Cancel</small>  <i style="color:darkgray;" class="fa-solid fa-arrow-down-long"></i></th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of data">
+              <td ><img style="width:50px;height:50px;"src="{{item.image}}"></td>
+              <td>{{item.name}}</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><i class="fa-sharp fa-solid fa-circle-check"></i></td>
+              <td><i class="fa-solid fa-trash-can"></i></td>
+            </tr>
+            <tr>
+             
+          </tbody>
+     
+     
+    
+        
+    
+      </table>
+     
+    </div>
+    <div class="container">
+    <div class="bg-light" style="margin-top: -16px;height: 2rem;opacity: 0.6;">
+      <button style="border:1px  solid grey;color:grey; margin-left:10px;float: left;border-radius: 10px;" (click)="prevPage()"><small> << prevoius </small></button>
+      <small  style="color:grey;margin-left: 450px;">page {{currentPage}}/10</small>
+       <button   style="border:1px  solid grey;color:grey; margin-right:10px;float:right;border-radius: 10px;" (click)="nextPage()"><small> next >> </small></button>
+      </div>
+    </div>
+    
