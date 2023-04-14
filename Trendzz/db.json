@@ -1,4 +1,5 @@
 {
+
   "products": [
     {
       "id": 1,
@@ -69,5 +70,66 @@
       "address": "aaaa House ",
       "id": 6
     }
-  ]
+  ],
+
+ "userProduct":[
+  {
+    "category":"Laptop & PC",
+    "productName":"ASUS X441UV",
+    "details":"consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+    "amount":2800
+
+  },
+  {
+    "category":"Smartphones",
+    "productName":"Iphone 14",
+    "details":"consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+    "amount":588
+
+  },
+  {
+    "category":"Laptop & PC",
+    "productName":"ASUS ZENBOOK C103",
+    "details":"consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+    "amount":800
+
+  },
+  {
+    "category":"Smaartphones",
+    "productName":"SAMSUNG 4531",
+    "details":"consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+    "amount":3000
+
+  },
+  {
+    "category":"Fashion",
+    "productName":"BAJU WANITA SIMPLE",
+    "details":"consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+    "amount":888
+
+  },
+  {
+    "category":"Fashion",
+    "productName":"Tas Kece",
+    "details":"consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+    "amount":4800
+
+  },
+  {
+    "category":"Electronics",
+    "productName":"Pemberish Hidung",
+    "details":"consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+    "amount":2500
+
+  },
+  {
+    "category":"Accessories",
+    "productName":"Kable Data Type C",
+    "details":"consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+    "amount":3300
+
+  }
+
+ ]
+
 }
