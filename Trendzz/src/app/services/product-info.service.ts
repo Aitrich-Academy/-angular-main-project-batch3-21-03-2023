@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { cardData } from '../class/userData';
+import { cardData } from '../class/datauser';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +8,7 @@ export class ProductInfoService {
 
   data : cardData[] = [
   {
+    p_id:1,
     productImage : '../../../assets/images/Rectangle 5.png',
     category: 'Laptop & PC',
     productName: 'ASUS X441UV',
@@ -16,6 +17,7 @@ export class ProductInfoService {
   },
 
   {
+    p_id:2,
   productImage : '../../../assets/images/Rectangle 5-1.png',
   category: 'Smartphones',
   productName: 'Iphone 14',
@@ -24,6 +26,7 @@ export class ProductInfoService {
   },
 
   {
+    p_id:3,
   productImage : '../../../assets/images/Laptop.png',
   category: 'Laptop & PC',
   productName: 'ASUS ZENBOOK C103',
@@ -32,6 +35,7 @@ export class ProductInfoService {
   },
 
   {
+    p_id:4,
     productImage : '../../../assets/images/Rectangle 5-2.png',
     category: 'Smartphones',
     productName: 'SAMSUNG 4531',
@@ -40,6 +44,7 @@ export class ProductInfoService {
   },
 
   {
+    p_id:5,
     productImage : '../../../assets/images/Rectangle 5 (7).png',
     category: 'Fashion',
     productName: 'BAJU WANITA SIMPLE',
@@ -48,6 +53,7 @@ export class ProductInfoService {
   }
   ,
   {
+    p_id:6,
     productImage : '../../../assets/images/Rectangle 5 (6).png',
     category: 'Fashion',
     productName: 'Tas Kece',
@@ -56,6 +62,7 @@ export class ProductInfoService {
   }
   ,
   {
+    p_id:7,
     productImage : '../../../assets/images/Rectangle 5-4.png',
     category: 'Electronics',
     productName: 'Pemberish Hidung',
@@ -64,6 +71,7 @@ export class ProductInfoService {
   }
   ,
   {
+    p_id:8,
     productImage : '../../../assets/images/Rectangle 5-3.png',
     category: 'Accessories',
     productName: 'Kable Data Type C',

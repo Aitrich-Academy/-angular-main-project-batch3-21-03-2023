@@ -1,4 +1,77 @@
 {
+
+  "products": [
+    {
+      "id": 1,
+      "image": "assets/images/image 12.png",
+      "name": "Product 1",
+      "category": "laptop",
+      "stockquantity": "100",
+      "price": "10.00",
+      "description": "Skin Care"
+    }
+  ],
+  "categories": [
+    {
+      "id": 14,
+      "categoryname": "modern wear",
+      "categorydiscription": "xxl size,ladies",
+      "categoryimage": ""
+    },
+    {
+      "id": 15,
+      "categoryname": "smart phone",
+      "categorydiscription": "64gb ram",
+      "categoryimage": "./assets/images/Rectangle 5-1.png"
+    }
+  ],
+  "user_cred": [
+    {
+      "id": 1,
+      " name": "lux",
+      "email": "lux@gmail.com",
+      "phone": 8545268742,
+      "password": "lux@123",
+      "address": "Luxury House, 24 No, ghurvilla, Calicut"
+    },
+    {
+      "id": 2
+    },
+    {
+      "username": "Lakz",
+      "gmail": "laks@gmail.com",
+      "phone": "9876543212",
+      "password": "lakz@123",
+      "address": "Lakz Home",
+      "password2": "lakz@123",
+      "id": 3
+    },
+    {
+      "username": "aaaa",
+      "gmail": "aaa@gmail.com",
+      "phone": "5647891234",
+      "password": "aaa@123",
+      "address": "aaaa House ",
+      "id": 4
+    },
+    {
+      "username": "aaaa",
+      "gmail": "aaa@gmail.com",
+      "phone": "5647891234",
+      "password": "aaa@123",
+      "address": "aaaa House ",
+      "id": 5
+    },
+    {
+      "username": "aaaa",
+      "gmail": "aaa@gmail.com",
+      "phone": "5647891234",
+      "password": "aaa@123",
+      "address": "aaaa House ",
+      "id": 6
+    }
+  ],
+
  "userProduct":[
   {
     "category":"Laptop & PC",
@@ -58,4 +131,5 @@
   }
 
  ]
+
 }
