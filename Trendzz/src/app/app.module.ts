@@ -8,9 +8,12 @@ import { AppComponent } from './app.component';
 import { SharedmoduleModule } from './sharedmodule/sharedmodule.module';
 import { UsermoduleModule } from './usermodule/usermodule.module';
 import { AdminmoduleModule } from './adminmodule/adminmodule.module';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { UserhomeComponent } from './userhome/userhome.component';
-import {  HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,12 +26,17 @@ import {  HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-     SharedmoduleModule, 
-     UsermoduleModule,
-     AdminmoduleModule,
+    SharedmoduleModule,
+    FormsModule,  
+    UsermoduleModule,
+    FormsModule, 
+    AdminmoduleModule,
+     BrowserAnimationsModule ,
+     HttpClientModule,
+     MatDialogModule,
      NgxPaginationModule,
-     FormsModule,
-     HttpClientModule
+
+
     
   ],
   providers: [],

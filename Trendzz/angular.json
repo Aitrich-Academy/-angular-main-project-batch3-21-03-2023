@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -69,7 +70,8 @@
               "browserTarget": "Trendzz:build:production"
             },
             "development": {
-              "browserTarget": "Trendzz:build:development"
+              "browserTarget": "Trendzz:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

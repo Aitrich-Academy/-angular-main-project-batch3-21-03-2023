@@ -1,0 +1,48 @@
+.modal-content{
+    background-color: #78B689;
+}
+
+.modal-header,.modal-footer{
+    border: 0;
+
+}
+.form-control,.input-group-text{
+    background-color: #897C62;
+    font-family: 'Itim', cursive;
+}
+::placeholder, .log,label,hr{
+    color: #ffffff;
+    font-family: 'Itim', cursive;
+
+}
+.log:hover{
+    background-color: #897C62;
+}
+input,span,hr{
+    border: 2px solid #fff;
+}
+.or{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    align-items: center;
+    column-gap: 1.6rem;
+    color: #fff;
+    margin-left: 40px;
+    font-family: 'Itim', cursive;
+}
+.or::before, .or::after{
+    content: '';
+    height: 2px;
+    background: #fff;
+    display: block;
+}
+ .acc,.sign{
+    color: #fff;
+    font-family: 'Itim', cursive;
+}
+
+.sign:hover{
+    color: #5858ff;
+} 
+
+

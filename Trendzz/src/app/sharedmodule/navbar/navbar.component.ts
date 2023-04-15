@@ -4,7 +4,11 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginData } from 'src/app/class/loginData';
 import { signinData } from 'src/app/class/signinData';
+import { ModalComponent } from '../modal/modal.component';
+import { MatDialog } from '@angular/material/dialog';
+import { SignUpComponent } from '../sign-up/sign-up.component';
 import { UserserviceService } from 'src/app/services/userservice.service';
+
 
 @Component
 ({
@@ -14,11 +18,17 @@ import { UserserviceService } from 'src/app/services/userservice.service';
 })
 export class NavbarComponent implements OnInit {
 
+
+  data : LoginData = {
+    email : '',
+    password: ''
+  }
+
   // data : LoginData = {
   //   email : '',
   //   password: ''
   // }
-  
+ 
   email : string = '';
   password : string = '';
     name : string = '';
@@ -30,7 +40,9 @@ export class NavbarComponent implements OnInit {
 
 
 
-  constructor(private route : Router,private userservice:UserserviceService,private http: HttpClient ){}
+
+  constructor(private route : Router,private userservice:UserserviceService,private http: HttpClient, public dialog: MatDialog ){}
+
 
   ngOnInit(): void {
       
@@ -50,5 +62,17 @@ this.userservice.adduserCred(data).subscribe((res)=>{
 console.log(res);
  })
   }
+  
+
+  openDialog() {
+    this.dialog.open(ModalComponent);
+   
+  }
+
+  openModal(){
+    this.dialog.open(SignUpComponent);
+
+  }
+
 
 }

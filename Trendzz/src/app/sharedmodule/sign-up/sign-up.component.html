@@ -1,0 +1,62 @@
+<div mat-dialog-content class="modal-content content2">
+    <div class="modal-body">
+        <div class="container mb-5 ">
+            <h2 id="id1">Sign Up</h2>
+            <!-- {{signForm.invalid }} -->
+            <form class="row g-3 " #signForm="ngForm" (ngSubmit)="signUp()">
+              <div class="col-md-4">
+                <label for="inputEmail4" class="form-label label2">Name</label>
+                <input type="text" class="form-control control2"  placeholder="abc" required  name="username" [(ngModel)]="name">
+              </div>
+              <div class="col-md-4">
+                <label for="inputPassword4" class="form-label label2">Email</label>
+                <input type="email" class="form-control control2"  placeholder="abc@abc.com" required name="gmail" >
+              </div>
+              <div class="col-md-4"></div>
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <label for="inputEmail4" class="form-label label2">Phone</label>
+                  <input type="tel" class="form-control control2"  placeholder="abc" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="inputPassword4" class="form-label label2">Password</label>
+                  <input type="password" class="form-control control2"  placeholder="*******" required>
+                </div>
+                <div class="col-md-4"></div>
+              </div>
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <label for="inputEmail4" class="form-label label2">Address</label>
+                  <input type="text" class="form-control control2"placeholder="abc" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="inputPassword4" class="form-label label2">Confirm password</label>
+                  <input type="password" class="form-control control2"  placeholder="*******" required>
+                </div>
+                <div class="col-md-4"></div>
+              </div>
+              <div class="row g-3">
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck">
+                  <label class="form-check-label" for="gridCheck" id="check">
+                    I've read and agree with terms of service and our <br> privacy policy
+                  </label>
+                </div>
+                <div>
+                  <button type="submit" [disabled]="signForm.invalid" (click)="signUp()" id="signIn" ><img src="../../../assets/images/Rectangle 7.png" class="img1"></button> 
+                  <div>
+                   <img src="../../../assets/images/Vector 2.png" alt="" class="arrow"  mat-button mat-dialog-close >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row g-3 ">
+              <div class="col-6 already ">
+                <h6>Already have an account ? <i>Sign in </i></h6> 
+              </div>
+            </div>
+            </form>
+          </div>
+    </div>
+  </div>
