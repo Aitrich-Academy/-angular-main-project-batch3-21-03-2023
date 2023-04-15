@@ -108,6 +108,48 @@
                     <input type="password" class="form-control control2"  placeholder="*******" required>
                   </div>
                   <div class="col-md-4"></div>
+
+</div>
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content content2">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <div class="container mb-5 ">
+            <h1 id="id1">Sign Up</h1>
+            {{signForm.invalid }}
+            <form class="row g-3" #signForm="ngForm" (ngSubmit)="signUp(signForm.value)">
+              <div class="col-md-4">
+                <label for="inputEmail4" class="form-label" id="label2">Name</label>
+                <input type="text" class="form-control control2"  placeholder="abc" required  name="username" [(ngModel)]="name">
+              </div>
+              <div class="col-md-4">
+                <label for="inputPassword4" class="form-label" id="label2">Email</label>
+                <input type="email" class="form-control control2"  placeholder="abc@abc.com" ngModel required name="gmail" >
+              </div>
+              <div class="col-md-4"></div>
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <label for="inputEmail4" class="form-label" id="label2">Phone</label>
+                  <input type="tel" class="form-control control2"  placeholder="123" ngModel required name="phone">
+                </div>
+                <div class="col-md-4">
+                  <label for="inputPassword4" class="form-label" id="label2">Password</label>
+                  <input type="password" class="form-control control2" ngModel placeholder="*******" required name="password">
+                </div>
+                <div class="col-md-4"></div>
+              </div>
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <label for="inputEmail4" class="form-label " id="label2">Address</label>
+                  <input type="text" class="form-control control2"placeholder="abc" ngModel required name="address">
+                </div>
+                <div class="col-md-4">
+                  <label for="inputPassword4" class="form-label" id="label2">Confirm password</label>
+                  <input type="password" class="form-control control2"  placeholder="*******" required  >
+
                 </div>
                 <div class="row g-3">
                   <div class="col-md-4">
@@ -119,7 +161,8 @@
                     <input type="password" class="form-control control2"  placeholder="*******" required>
                   </div>
                   <div class="col-md-4"></div>
-                </div>
+               </div>
+
                 <div class="row g-3">
                 <div class="col-12">
                   <div class="form-check">
@@ -128,6 +171,9 @@
                       I've read and agree with terms of service and our <br> privacy policy
                     </label>
                   </div>
+
+                <div>
+                  <button type="submit" [disabled]="signForm.invalid"  id="signIn" ><img src="../../../assets/images/Rectangle 7.png" alt=""></button> 
                   <div>
                     <button type="submit" [disabled]="signForm.invalid" (click)="signUp()" id="signIn" ><img src="../../../assets/images/Rectangle 7.png" alt=""></button> 
                     <div>

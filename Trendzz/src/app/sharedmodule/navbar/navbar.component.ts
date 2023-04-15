@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -6,42 +7,60 @@ import { signinData } from 'src/app/class/signinData';
 import { ModalComponent } from '../modal/modal.component';
 import { MatDialog } from '@angular/material/dialog';
 import { SignUpComponent } from '../sign-up/sign-up.component';
+import { UserserviceService } from 'src/app/services/userservice.service';
 
-@Component({
+
+@Component
+({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
 
+
   data : LoginData = {
     email : '',
     password: ''
   }
+
+  // data : LoginData = {
+  //   email : '',
+  //   password: ''
+  // }
+ 
   email : string = '';
   password : string = '';
-
-
     name : string = '';
     gmail : string = '';
-    gpassword: string = ''
+    gpassword: string = '';
 
 
-  constructor(private route : Router, public dialog: MatDialog){}
+
+
+
+
+
+  constructor(private route : Router,private userservice:UserserviceService,private http: HttpClient, public dialog: MatDialog ){}
+
 
   ngOnInit(): void {
       
   }
 
   Login(){
-    if(this.email === "user@gmail.com" && this.password === "user"){
-      this.route.navigate(['/profile']);
+    if(this.email === "admin@gmail.com" && this.password === "admin"){
+      this.route.navigate(['/admin']);
     }
 
   }
 
-  signUp(){
-    console.log("Sign Up works")
+  signUp(data:signinData){
+    console.log("Sign Up works");
+    console.log(data);
+this.userservice.adduserCred(data).subscribe((res)=>{
+console.log(res);
+ })
   }
   
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ProductInfoService } from '../services/product-info.service';
-import { cardData } from '../class/userData';
+import { cardData } from '../class/datauser';
 import { CategoryService } from '../services/category.service';
 import { Category } from '../class/category';
 import { LoginData } from '../class/loginData';
@@ -67,6 +67,10 @@ export class UserhomeComponent implements OnInit{
   signUp(){
     // console.log("Sign Up works")
     
+  }
+  productPlaceOrder(_Image:any,_Name:any,_Amt:any)
+  {
+     console.log(_Image,_Name,_Amt)
   }
 
 }
