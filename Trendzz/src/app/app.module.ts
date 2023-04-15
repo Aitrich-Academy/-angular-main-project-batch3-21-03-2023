@@ -10,7 +10,9 @@ import { UserlandingRoutingModule } from './usermodule/userlanding-routing.modul
 import { UserhomeComponent } from './userhome/userhome.component';
 import { AdminmoduleModule } from './adminmodule/adminmodule.module';
 import { NotFoundComponent } from './not-found/not-found.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -32,11 +34,14 @@ import { NotFoundComponent } from './not-found/not-found.component';
     UserlandingRoutingModule,
     AppRoutingModule,
     SharedmoduleModule,
-   
     FormsModule,  
     UsermoduleModule,
     FormsModule, 
-    AdminmoduleModule 
+    AdminmoduleModule,
+     BrowserAnimationsModule ,
+     HttpClientModule,
+     MatDialogModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

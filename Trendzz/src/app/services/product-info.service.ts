@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { cardData } from '../class/userData';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +8,7 @@ import { cardData } from '../class/userData';
 export class ProductInfoService {
 
   data : cardData[] = [
+
   {
     productImage : '../../../assets/images/Rectangle 5.png',
     category: 'Laptop & PC',
@@ -70,10 +72,10 @@ export class ProductInfoService {
     productDesc:'consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....',
     amount:  3300,
   },
+]
+ 
 
-  ]
-
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   productInfo(){
     return this.data;

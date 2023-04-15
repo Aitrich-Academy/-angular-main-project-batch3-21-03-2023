@@ -3,6 +3,9 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginData } from 'src/app/class/loginData';
 import { signinData } from 'src/app/class/signinData';
+import { ModalComponent } from '../modal/modal.component';
+import { MatDialog } from '@angular/material/dialog';
+import { SignUpComponent } from '../sign-up/sign-up.component';
 
 @Component({
   selector: 'app-navbar',
@@ -11,10 +14,10 @@ import { signinData } from 'src/app/class/signinData';
 })
 export class NavbarComponent implements OnInit {
 
-  // data : LoginData = {
-  //   email : '',
-  //   password: ''
-  // }
+  data : LoginData = {
+    email : '',
+    password: ''
+  }
   email : string = '';
   password : string = '';
 
@@ -24,11 +27,7 @@ export class NavbarComponent implements OnInit {
     gpassword: string = ''
 
 
-
-
-
-
-  constructor(private route : Router){}
+  constructor(private route : Router, public dialog: MatDialog){}
 
   ngOnInit(): void {
       
@@ -44,5 +43,17 @@ export class NavbarComponent implements OnInit {
   signUp(){
     console.log("Sign Up works")
   }
+  
+
+  openDialog() {
+    this.dialog.open(ModalComponent);
+   
+  }
+
+  openModal(){
+    this.dialog.open(SignUpComponent);
+
+  }
+
 
 }
