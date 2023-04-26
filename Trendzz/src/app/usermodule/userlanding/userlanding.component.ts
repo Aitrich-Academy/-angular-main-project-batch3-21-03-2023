@@ -14,6 +14,7 @@ export class UserlandingComponent implements OnInit {
     productName: 'ASUS X441UV',
     productDesc:'consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....',
     amount:  2800,
+    id:0
   },
 
   {
@@ -22,6 +23,7 @@ export class UserlandingComponent implements OnInit {
   productName: 'Iphone 14',
   productDesc:'consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....',
   amount:  588,
+  id:0
   },
 
   {
@@ -30,6 +32,7 @@ export class UserlandingComponent implements OnInit {
   productName: 'ASUS ZENBOOK C103',
   productDesc:'consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....',
   amount:  800,
+  id:0
   },
 
   {
@@ -38,6 +41,7 @@ export class UserlandingComponent implements OnInit {
     productName: 'SAMSUNG 4531',
     productDesc:'consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....',
     amount:  3000,
+    id:0
   },
 
   {
@@ -46,6 +50,7 @@ export class UserlandingComponent implements OnInit {
     productName: 'BAJU WANITA SIMPLE',
     productDesc:'consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....',
     amount:  888,
+    id:0
   }
   ,
   {
@@ -54,6 +59,7 @@ export class UserlandingComponent implements OnInit {
     productName: 'Tas Kece',
     productDesc:'consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....',
     amount:  4800,
+    id:0
   }
   ,
   {
@@ -62,6 +68,7 @@ export class UserlandingComponent implements OnInit {
     productName: 'Pemberish Hidung',
     productDesc:'consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....',
     amount:  2500,
+    id:0
   }
   ,
   {
@@ -70,6 +77,7 @@ export class UserlandingComponent implements OnInit {
     productName: 'Kable Data Type C',
     productDesc:'consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....',
     amount:  3300,
+    id:0
   }
 
   ]

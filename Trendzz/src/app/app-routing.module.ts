@@ -3,12 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { UserhomeComponent } from './userhome/userhome.component';
 
 const routes: Routes = [
-
  { path:'', component:UserhomeComponent,
-
  },
  { path:'home', component:UserhomeComponent,
-
  },
  {
   path:'admin',loadChildren:()=>import('./adminmodule/adminmodule.module').then(m=>m.AdminmoduleModule)
@@ -16,8 +13,9 @@ const routes: Routes = [
  {
   path:'user',loadChildren:()=>import('./usermodule/usermodule.module').then(m=>m.UsermoduleModule)
  },
-
 ];
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -39,14 +39,16 @@
         <div class="container">
           <div class="row">
             <div class="col"><img src="../../../assets/images/Frame 313.png" width="200" height="200"></div>
-            <form  class="col" #loginForm="ngForm" (ngSubmit)="Login()">
+            <form  class="col" #loginForm="ngForm" (ngSubmit)="Login(loginForm.value)">
               <div class="input-group mb-3 form-group">
                 <span class="input-group-text" id="basic-addon1"><img src="../../../assets/images/Layer 2.png" alt=""></span>
-                <input  type="email" class="form-control" placeholder="example@gmail.com" aria-label="Username" aria-describedby="basic-addon1" required [(ngModel)]="email" name='email'>
+                <input  type="email" class="form-control" 
+                placeholder="example@gmail.com" aria-label="Username" aria-describedby="basic-addon1" required [(ngModel)]="email" name='email'>
               </div>
               <div class="input-group mb-3 form-group">
                 <span class="input-group-text" id="basic-addon1"><img src="../../../assets/images/Vector.png" alt=""></span>
-                <input type="password" class="form-control" placeholder="*******" aria-label="Username" aria-describedby="basic-addon1" minlength="4" maxlength="8" required [(ngModel)]="password" name="password" #pass="ngModel">
+                <input type="password" class="form-control" 
+                placeholder="*******" aria-label="Username" aria-describedby="basic-addon1" minlength="4" maxlength="8" required [(ngModel)]="loginpassword" name="password" #pass="ngModel">
               </div>
               <div class="alert alert-danger" *ngIf="pass.errors?. ['minlength']">
                 Password must be 4 Characters
@@ -56,6 +58,7 @@
               </div>
               <div class="input-group mb-3">
                 <button class="btn form-control log" type="submit" [disabled]="loginForm.invalid" >Log in</button>
+                {{loginError}}
               </div>
               <div class="or">
                 Or

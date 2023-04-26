@@ -4,6 +4,7 @@ import { ProductInfoService } from '../services/product-info.service';
 import { cardData } from '../class/datauser';
 import { CategoryService } from '../services/category.service';
 import { Category } from '../class/category';
+import { UserserviceService } from '../services/userservice.service';
 
 
 
@@ -16,21 +17,23 @@ import { Category } from '../class/category';
 export class UserhomeComponent implements OnInit{
 
 
-  data: cardData[] = [];
+  data: cardData[]=[];
   categoryData : Category[] =[];
   
 
-  constructor(private info : ProductInfoService , private category : CategoryService){}
+  constructor(private info : ProductInfoService , private category : CategoryService,private userService:UserserviceService){
+    
+  }
 
   ngOnInit(): void {
-     this.data = this.info.productInfo();
+    this.info.productInfo().subscribe((res)=>
+    {
+     this.data=res;
+    })
      this.categoryData = this.category.getCategory()
 
   }
-  productPlaceOrder(_Image:any,_Name:any,_Amt:any)
-  {
-     console.log(_Image,_Name,_Amt)
-  }
+  
 
 }
 
