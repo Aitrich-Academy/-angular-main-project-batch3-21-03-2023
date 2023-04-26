@@ -7,18 +7,23 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
 import { UserorderhistoryComponent } from './userorderhistory/userorderhistory.component';
 import { ProductplaceorderComponent } from './productplaceorder/productplaceorder.component';
 import { OrdershippingComponent } from './ordershipping/ordershipping.component';
+import { UserosGuard } from '../guards/useros.guard';
 
 const routes: Routes = [
   // {path: 'userlanding' , component : UserlandingComponent},
   // {path: '' , redirectTo:'/userlanding', pathMatch : 'full'},
   // {path:'adminlanding', component: AdminlandingComponent},
-  // {path:"",component:UserprofileComponent},
-{path:"myorders",component: MyordersComponent},
+  {path:"",component:UserprofileComponent},
+{path:"myorders/:pid",component: MyordersComponent},
 {path:"userpro",component:UserprofileComponent},
-{path:"useroh",component:UserorderhistoryComponent},
-{path:"productInfo",component:ProductplaceorderComponent},
-{path:'shipping',component:OrdershippingComponent},
-
+{path:"useroh/:pid",component:UserorderhistoryComponent},
+{
+  path:"placeorder/:id",component:ProductplaceorderComponent
+},
+{
+  path:"ordership/:idpro",component:OrdershippingComponent,canActivate:[UserosGuard]
+  
+},
   
 ];
 

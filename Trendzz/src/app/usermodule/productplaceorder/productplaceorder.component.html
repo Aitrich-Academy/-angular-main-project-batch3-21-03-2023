@@ -1,22 +1,22 @@
-<app-navbar></app-navbar>
-<div class="container mt-3">
+
+<div class="container mt-3" >
     <div class="row justify-content-center">
-        <div class="col col-md-4 imagecol align-self-center">
-            <img src="../../../assets/images/Rectangle 5.png" width="350px" height="330px">
+        <div class="col col-lg-6 imagecol align-self-center">
+            <img src="{{productData?.productImage}}" width="350px" height="330px">
 
         </div>
         
-        <div class="col col-lg-8 mt-3">
+        <div class="col col-lg-6 mt-3">
 
 
-            <div class="text-danger h5">Rs 700/- 
-                 <span class="text-secondary text-decoration-line-through h6 ">1000</span>&nbsp;
+            <div class="text-danger h5">{{productData?.amount}} 
+                 <span class="text-secondary text-decoration-line-through h6 ">{{productData?.amount}}0 </span>&nbsp;
                  <span class="text-white bg-danger">-50%</span> 
                   <img class="revimg ms-5" src="../../../assets/images/reviews.jpg">
                 </div>
 
 
-             <div class="btn btn-success mt-3 ms-5 pobtn" routerLink="/shipping">
+             <div class="btn btn-success mt-3 ms-5  pobtn" (click)="userLoggedCheck(productData?.id)">
 
                 <svg  xmlns="http://www.w3.org/2000/svg" width="16"
                  height="16" fill="currentColor" class="bi bi-cart text-black" viewBox="0 0 16 16">
@@ -84,7 +84,8 @@
                   <div class="col-md-3 py-1"><img src="../../../assets/images/master-card.jpg"></div>
                   <div class="col-md-3 py-1"><img src="../../../assets/images/pay-pal.jpg"></div>
                 </div>
+
+
         </div>
     </div>
 </div>
-<app-footer></app-footer>

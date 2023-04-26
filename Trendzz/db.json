@@ -11,6 +11,72 @@
       "description": "Skin Care"
     }
   ],
+  "userProduct": [
+    {
+      "category": "Laptop & PC",
+      "productName": "ASUS X441UV",
+      "details": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+      "amount": 2800,
+      "productImage": "assets/images/Rectangle 5.png",
+      "id": 1
+    },
+    {
+      "category": "Smartphones",
+      "productName": "Iphone 14",
+      "details": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+      "amount": 588,
+      "productImage": "assets/images/Rectangle 5 (7).png",
+      "id": 2
+    },
+    {
+      "category": "Laptop & PC",
+      "productName": "ASUS ZENBOOK C103",
+      "details": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+      "amount": 800,
+      "productImage": "assets/images/Rectangle 5.png",
+      "id": 3
+    },
+    {
+      "category": "Smaartphones",
+      "productName": "SAMSUNG 4531",
+      "details": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+      "amount": 3000,
+      "productImage": "assets/images/Rectangle 5-1.png",
+      "id": 4
+    },
+    {
+      "category": "Fashion",
+      "productName": "BAJU WANITA SIMPLE",
+      "details": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+      "amount": 888,
+      "productImage": "assets/images/Rectangle 5 (6).png",
+      "id": 5
+    },
+    {
+      "category": "Fashion",
+      "productName": "Tas Kece",
+      "details": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+      "amount": 4800,
+      "productImage": "assets/images/Rectangle 5-3.png",
+      "id": 6
+    },
+    {
+      "category": "Electronics",
+      "productName": "Pemberish Hidung",
+      "details": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+      "amount": 2500,
+      "productImage": "assets/images/Rectangle 5-3.png",
+      "id": 7
+    },
+    {
+      "category": "Accessories",
+      "productName": "Kable Data Type C",
+      "details": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+      "amount": 3300,
+      "productImage": "assets/images/Rectangle 5-2.png",
+      "id": 8
+    }
+  ],
   "categories": [
     {
       "id": 14,
@@ -27,48 +93,112 @@
   ],
   "user_cred": [
     {
-      "id": 1,
-      " name": "lux",
-      "email": "lux@gmail.com",
-      "phone": 8545268742,
-      "password": "lux@123",
-      "address": "Luxury House, 24 No, ghurvilla, Calicut"
+      "username": "lax",
+      "gmail": "lax@gmail.com",
+      "phone": "9854549855",
+      "password": "lax@123",
+      "address": "lux house",
+      "id": 1
     },
     {
+      "username": "veer",
+      "gmail": "veer@gmail.com",
+      "phone": "4567894562",
+      "password": "veer@123",
+      "address": "veer house",
+      "id": 2
+    }
+  ],
+  "ordered_products": [
+    {
+      "userId": 1,
+      "productId": 2,
+      "category": "Smartphones",
+      "productName": "Iphone 14",
+      "details": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+      "amount": 588,
+      "productImage": "assets/images/Rectangle 5 (7).png",
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "productId": 7,
+      "category": "Electronics",
+      "productName": "Pemberish Hidung",
+      "details": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+      "amount": 2500,
+      "productImage": "assets/images/Rectangle 5-3.png",
       "id": 2
     },
     {
-      "username": "Lakz",
-      "gmail": "laks@gmail.com",
-      "phone": "9876543212",
-      "password": "lakz@123",
-      "address": "Lakz Home",
-      "password2": "lakz@123",
+      "userId": 1,
+      "productId": 8,
+      "category": "Accessories",
+      "productName": "Kable Data Type C",
+      "details": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+      "amount": 3300,
+      "productImage": "assets/images/Rectangle 5-2.png",
       "id": 3
     },
     {
-      "username": "aaaa",
-      "gmail": "aaa@gmail.com",
-      "phone": "5647891234",
-      "password": "aaa@123",
-      "address": "aaaa House ",
+      "userId": 1,
+      "productId": 2,
+      "category": "Smartphones",
+      "productName": "Iphone 14",
+      "details": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+      "amount": 588,
+      "productImage": "assets/images/Rectangle 5 (7).png",
       "id": 4
     },
     {
-      "username": "aaaa",
-      "gmail": "aaa@gmail.com",
-      "phone": "5647891234",
-      "password": "aaa@123",
-      "address": "aaaa House ",
+      "userId": 1,
+      "productId": 4,
+      "category": "Smaartphones",
+      "productName": "SAMSUNG 4531",
+      "details": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+      "amount": 3000,
+      "productImage": "assets/images/Rectangle 5-1.png",
       "id": 5
     },
     {
-      "username": "aaaa",
-      "gmail": "aaa@gmail.com",
-      "phone": "5647891234",
-      "password": "aaa@123",
-      "address": "aaaa House ",
+      "userId": 1,
+      "productId": 3,
+      "category": "Laptop & PC",
+      "productName": "ASUS ZENBOOK C103",
+      "details": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+      "amount": 800,
+      "productImage": "assets/images/Rectangle 5.png",
       "id": 6
+    },
+    {
+      "userId": 1,
+      "productId": 5,
+      "category": "Fashion",
+      "productName": "BAJU WANITA SIMPLE",
+      "details": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+      "amount": 888,
+      "productImage": "assets/images/Rectangle 5 (6).png",
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "productId": 2,
+      "category": "Smartphones",
+      "productName": "Iphone 14",
+      "details": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+      "amount": 588,
+      "productImage": "assets/images/Rectangle 5 (7).png",
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "productId": 8,
+      "category": "Accessories",
+      "productName": "Kable Data Type C",
+      "details": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+      "amount": 3300,
+      "productImage": "assets/images/Rectangle 5-2.png",
+      "id": 9
     }
   ],
 

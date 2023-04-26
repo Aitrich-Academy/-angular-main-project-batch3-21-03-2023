@@ -3,7 +3,7 @@
         <div class="container mb-5 ">
             <h2 id="id1">Sign Up</h2>
             <!-- {{signForm.invalid }} -->
-            <form class="row g-3 " #signForm="ngForm" (ngSubmit)="signUp()">
+            <form class="row g-3 " #signForm="ngForm" (ngSubmit)="signUp(signForm.value)">
               <div class="col-md-4">
                 <label for="inputEmail4" class="form-label label2">Name</label>
                 <input type="text" class="form-control control2"  placeholder="abc" required  name="username" [(ngModel)]="name">
@@ -44,7 +44,7 @@
                   </label>
                 </div>
                 <div>
-                  <button type="submit" [disabled]="signForm.invalid" (click)="signUp()" id="signIn" ><img src="../../../assets/images/Rectangle 7.png" class="img1"></button> 
+                  <button type="submit" [disabled]="signForm.invalid"  id="signIn" ><img src="../../../assets/images/Rectangle 7.png" class="img1"></button> 
                   <div>
                    <img src="../../../assets/images/Vector 2.png" alt="" class="arrow"  mat-button mat-dialog-close >
                   </div>

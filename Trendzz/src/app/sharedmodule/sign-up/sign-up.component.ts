@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { signinData } from 'src/app/class/signinData';
 
 @Component({
   selector: 'app-sign-up',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignUpComponent implements OnInit {
 
-  name : string = '';
+  name : any;
     gmail : string = '';
     gpassword: string = ''
 
@@ -17,7 +19,7 @@ export class SignUpComponent implements OnInit {
         
     }
 
-    signUp(){
+    signUp(data:signinData){
       console.log("Sign Up works")
     }
     

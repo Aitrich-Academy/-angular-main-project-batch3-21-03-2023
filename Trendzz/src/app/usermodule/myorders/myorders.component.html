@@ -10,7 +10,14 @@
 
 <div class="col py-2 mt-5 d-flex justify-content-center">
     <div class="card card2 " style="width: 25rem;">
-        <img class="card-img-top i2" src="../../../assets/images/Frame 285.png" alt="Card image cap">
+      <div class="row">
+      <div class="col-sm">
+        <img class="card-img i2" src="{{productData?.productImage}}" alt="Card image cap"></div>
+        <div class="col">
+          <h5>{{productData?.productName}}</h5>
+          <p class="text-muted">{{productData?.category}}</p>
+          <h5>{{productData?.amount}}</h5>
+        </div></div>
         <div class="card-body">
            
           <table class="table">
@@ -22,13 +29,13 @@
                
                 <td>Product Total</td>
                 <td></td>
-                <td>$124.50</td>
+                <td>{{productData?.amount}}</td>
               </tr>
               <tr>
                 
                 <td>Discount</td>
                 <td></td>
-                <td>%6<span class="text-muted">($12.25)</span></td>
+                <td>%10<span class="text-muted">(100/-)</span></td>
               </tr>
               <tr>
                 
@@ -40,13 +47,13 @@
                 
                 <th class="t2" >Total</th>
                 <td></td>
-                <th class="t2">$112.25</th>
+                <th class="t2">{{productData?.amount}}</th>
               </tr>
             </tbody>
           </table>
           
         </div>
-        <button type="button" class="btn btn-primary  btn1 " > Cancel Order</button>
+        <button type="button" class="btn btn-primary  btn1 " (click)="deleteProduct(productData?.id)"> Cancel Order</button>
       </div>
   </div>
 </div></div>

@@ -35,32 +35,41 @@ export class NavbarComponent implements OnInit {
     gmail : string = '';
     gpassword: string = '';
 
+loginpassword:any;
+loginError:any='';
 
 
 
 
-
-
-  constructor(private route : Router,private userservice:UserserviceService,private http: HttpClient, public dialog: MatDialog ){}
+  constructor(private route : Router,private userservice:UserserviceService,private http: HttpClient, private dialog: MatDialog ){}
 
 
   ngOnInit(): void {
       
   }
 
-  Login(){
-    if(this.email === "admin@gmail.com" && this.password === "admin"){
+  Login(login:LoginData){
+    if(this.email === "admin@gmail.com" && this.loginpassword === "admin"){
       this.route.navigate(['/admin']);
+      
     }
-
+    else 
+    {
+      console.log(login);
+      this.userservice.loginCred(login);
+      this.userservice.isLoginFailed.subscribe((err)=>
+      {
+        if(err){
+      this.loginError='Loggin failed! Please write correct Email and Password';
+        }
+      })
+    }
   }
 
   signUp(data:signinData){
     console.log("Sign Up works");
     console.log(data);
-this.userservice.adduserCred(data).subscribe((res)=>{
-console.log(res);
- })
+this.userservice.adduserCred(data)
   }
   
 

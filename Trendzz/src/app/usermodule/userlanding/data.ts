@@ -4,5 +4,20 @@ export interface cardData{
     productName: string,
     productDesc : string,
     amount : number,
+    id:number
 
+}
+
+
+export interface orderhistory{
+    userId?:number ,
+    productId?:number ,
+    productImage? : string  ,
+    category? : string ,
+    productName?: string ,
+    productDesc?: string ,
+    amount ?: number ,
+    id?:number 
+    
+   
 }

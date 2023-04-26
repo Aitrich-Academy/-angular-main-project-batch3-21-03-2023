@@ -6,42 +6,26 @@
 <app-usersidebar></app-usersidebar>
 </div>
 <div class="col s2 justify-content-start">
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-sm-6">
+<div class="container mt-5" >
+    <div class="row" >
+        <div class="col-lg-6" *ngFor="let cdata of ohProducts">
             <div class="card mb-3" style="max-width: 500px;">
                 <div class="row g-0">
                   <div class="col-md-4">
-                    <img src="../../../assets/images/Rectangle 11.png" class="img-fluid rounded-start p-1" alt="...">
+                    <img src="{{cdata?.productImage}}" class="img-fluid rounded-start p-1" alt="...">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title">Secret Concealer</h5>
+                      <h5 class="card-title">{{cdata?.productName}}</h5>
                       
-                      <p class="card-text"><small class="text-muted">covers dark circles covers dark</small></p>
-                      <span class="d-flex"><h5 class="card-title">$21.45</h5><img class="ms-5" src="../../../assets/images/Group 11054.png"></span>
+                      <p class="card-text"><small class="text-muted">{{cdata?.category}}</small></p>
+                      <span class="d-flex"><h5 class="card-title">{{cdata?.amount}}/-</h5><img class="ms-5" src="../../../assets/images/Group 11054.png"></span>
                     </div>
                   </div>
                 </div>
               </div>
         </div>
-        <div class="col-sm-6">
-            <div class="card mb-3" style="max-width: 500px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                      <img src="../../../assets/images/Rectangle 12.png" class="img-fluid rounded-start p-1" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                      <div class="card-body">
-                        <h5 class="card-title">Secret Concealer</h5>
-                        
-                        <p class="card-text"><small class="text-muted">covers dark circles covers dark</small></p>
-                        <span class="d-flex"><h5 class="card-title">$21.45</h5><img class="ms-5" src="../../../assets/images/Group 11054.png"></span>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-        </div>
+        
       </div>  
 </div>
 </div></div>

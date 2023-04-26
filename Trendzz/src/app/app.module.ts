@@ -26,7 +26,7 @@ import { UserhomeComponent } from './userhome/userhome.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedmoduleModule,
+    SharedmoduleModule, 
     FormsModule,  
     UsermoduleModule,
     FormsModule, 
@@ -34,7 +34,7 @@ import { UserhomeComponent } from './userhome/userhome.component';
      BrowserAnimationsModule ,
      HttpClientModule,
      MatDialogModule,
-     NgxPaginationModule,
+     NgxPaginationModule
 
 
     
