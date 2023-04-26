@@ -6,6 +6,8 @@ import { UsersidebarComponent } from './usersidebar/usersidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { ModalComponent } from './modal/modal.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 
 
@@ -14,15 +16,18 @@ import { RouterModule } from '@angular/router';
     NavbarComponent,
     AdminnavbarComponent,
     UsersidebarComponent,
-    FooterComponent 
+    FooterComponent,
+    ModalComponent,
+    SignUpComponent
   ],
+ 
   imports: [
     CommonModule,
     FormsModule,
     RouterModule
   ],
   exports: [
-    NavbarComponent,
+   
     AdminnavbarComponent,
     UsersidebarComponent,
     FooterComponent 

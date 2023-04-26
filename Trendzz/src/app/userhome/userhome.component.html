@@ -1,6 +1,58 @@
 
 <app-navbar></app-navbar>
 
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="col"><img src="../../../assets/images/Frame 313.png" width="200" height="200"></div>
+            <form  class="col" #loginForm="ngForm" (ngSubmit)="Login()">
+              <div class="input-group mb-3 form-group">
+                <span class="input-group-text" id="basic-addon1"><img src="../../../assets/images/Layer 2.png" alt=""></span>
+                <input  type="email" class="form-control" placeholder="example@gmail.com" aria-label="Username" aria-describedby="basic-addon1" required [(ngModel)]="email" name='email'>
+              </div>
+              <div class="input-group mb-3 form-group">
+                <span class="input-group-text" id="basic-addon1"><img src="../../../assets/images/Vector.png" alt=""></span>
+                <input type="password" class="form-control" placeholder="*******" aria-label="Username" aria-describedby="basic-addon1" minlength="4" maxlength="8" required [(ngModel)]="password" name="password" #pass="ngModel">
+              </div>
+              <div class="alert alert-danger" *ngIf="pass.errors?. ['minlength']">
+                Password must be 4 Characters
+              </div>
+              <div>
+                <label for="" class="d-flex justify-content-end mb-3">Forgot Password ?</label>
+              </div>
+              <div class="input-group mb-3">
+                <button class="btn form-control log" type="submit" [disabled]="loginForm.invalid" id="modalBtnClick">Log in</button>
+              </div>
+              <div class="or">
+                Or
+              </div>
+              <div class="container-fluid">
+              <div class="row text-center">
+              <div class="col"><img src="../../../assets/images/Google.png" width="30" height="30"></div>
+              <div class="col"><img src="../../../assets/images/Facebook.png" width="30" height="30"></div>
+              <div class="col"><img src="../../../assets/images/Apple.png" width="30" height="30"></div>
+            </div>
+            <div class="row mt-3">
+              <div class="col acc">
+              <p>Don't have an account? <a href="" data-bs-toggle="modal" data-bs-target="#exampleModalToggle2" class="sign">Sign Up</a>
+              </div>
+            </div>
+          </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <header>
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -34,7 +86,7 @@
         <div class="card">
           <img src={{item.image}} class="card-img-top category" alt="...">
           <div class="card-body">
-            <a href="#" class="btn btn pro">{{item.category}}</a>
+            <a routerLink='' class="btn btn pro">{{item.category}}</a>
           </div>
         </div>
     </div>

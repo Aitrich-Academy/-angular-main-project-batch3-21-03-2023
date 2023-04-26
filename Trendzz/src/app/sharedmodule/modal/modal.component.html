@@ -1,0 +1,46 @@
+
+<div mat-dialog-content class="modal-content ">
+  <div class="modal-body me-4">
+    <div class="container">
+      <div class="row">
+        <div class="col" style="width: 290px;"><img src="../../../assets/images/Frame 313.png" width="200" height="200"></div>
+       <form class="col" #loginForm="ngForm" (ngsubmit)="Login()">
+          <div class="input-group mb-3 form-group">
+            <span class="input-group-text" id="basic-addon1"><img src="../../../assets/images/Layer 2.png" alt=""></span>
+            <input  type="email" class="form-control" placeholder="example@gmail.com" aria-label="Username" aria-describedby="basic-addon1" required [(ngModel)]="email" name='email'>
+          </div>
+          <div class="input-group mb-3 form-group">
+            <span class="input-group-text" id="basic-addon1"><img src="../../../assets/images/Vector.png" alt=""></span>
+            <input type="password" class="form-control" placeholder="*******" aria-label="Username" aria-describedby="basic-addon1" minlength="4" maxlength="8" required [(ngModel)]="password" name="password" #pass="ngModel">
+          </div>
+          <div class="alert alert-danger" *ngIf="pass.errors?. ['minlength']">
+            Password must be 4 Characters
+          </div>
+          <div>
+            <label for="" class="d-flex justify-content-end mb-3">Forgot Password ?</label>
+          </div>
+          <div class="input-group mb-3">
+            <button class="btn form-control log" type="submit" [disabled]="loginForm.invalid" id="modalBtnClick" mat-button mat-dialog-close >Log in</button>
+          </div>
+          <div class="or">
+            Or
+          </div>
+          <div class="container-fluid">
+          <div class="row text-center">
+          <div class="col"><img src="../../../assets/images/Google.png" width="30" height="30"></div>
+          <div class="col"><img src="../../../assets/images/Facebook.png" width="30" height="30"></div>
+          <div class="col"><img src="../../../assets/images/Apple.png" width="30" height="30"></div>
+        </div>
+        <div class="row mt-3">
+          <div class="col acc">
+          <p>Don't have an account? <a href="" class="sign">Sign Up</a>
+          </div>
+        </div>
+      </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
