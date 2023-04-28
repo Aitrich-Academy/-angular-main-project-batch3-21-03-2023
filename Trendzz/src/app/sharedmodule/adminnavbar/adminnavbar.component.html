@@ -9,6 +9,15 @@
       <div class="collapse navbar-collapse justify-content-center " id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto text-center">
           <li class="nav-item">
+
+            <a class="nav-link" aria-current="page"  [routerLink]="['/adminlanding']">Products</a>
+          </li>
+          <li class="nav-item">
+            <a aria-current="page" [routerLink]="['/admincategory']" class="nav-link"  >Category</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" [routerLink]="['/adminorders']">Orders</a>
+
             <a class="nav-link" aria-current="page"  routerLink="/">Products</a>
           </li>
           <li class="nav-item">
@@ -16,6 +25,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link"  routerLink="/">Orders</a>
+
           </li>
           <li class="nav-item">
             <img src="assets/images/Group 1.png" alt="" srcset="" class="mt-2 ms-2">
@@ -31,4 +41,8 @@
     </div>
     </div>
   </nav>
+
+
+<router-outlet></router-outlet>
+
 

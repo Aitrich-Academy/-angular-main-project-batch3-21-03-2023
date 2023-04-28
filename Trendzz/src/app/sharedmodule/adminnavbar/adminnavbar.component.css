@@ -6,6 +6,11 @@ a {
     position: relative;
 }
 
+a:hover{
+    cursor: pointer;
+}
+
+
 button {
     background-color: #ffeeeb;
     color: #4cb96d;
