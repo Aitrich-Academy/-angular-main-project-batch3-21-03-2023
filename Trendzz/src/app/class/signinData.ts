@@ -1,9 +1,9 @@
-export class signinData{
-    name : string = ''
-    email : string = ''
-    phone? : number = 0
-    password : string = ''
-    address? : string = ''
-    confirmPassword? : string = ''
+export interface signinData{
+    username : string ;
+    gmail : string ;
+    phone: number ;
+    password : string ;
+    address : string ;
+    id:number;
 
 }

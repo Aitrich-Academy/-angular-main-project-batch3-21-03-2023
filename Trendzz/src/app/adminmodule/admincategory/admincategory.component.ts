@@ -3,7 +3,11 @@ import { Items } from '../modals/items';
 import { AdminserviceService } from '../adminservice.service';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+
 import { FormGroup,FormBuilder,Validators } from  '@angular/forms'
+
+import { FormGroup,FormBuilder } from  '@angular/forms'
+
 import { ItemsCategory } from '../adminlanding/itemsmodal';
 import { Router } from '@angular/router';
 
@@ -28,9 +32,15 @@ export class AdmincategoryComponent {
  this.formValue = this.fb.group
  ({
   id:[''],
+
    categoryname:['',Validators.required],
    categorydiscription:['',Validators.required],
    categoryimage:['',Validators.required]
+
+   categoryname:[''],
+   categorydiscription:[''],
+   categoryimage:['']
+
  })
 
 
@@ -59,7 +69,11 @@ imageSrc:any="";
   data:ItemsCategory[]=[];
   totalItems:number = 0;
   currentPage:number= 1;
+
   itemsPerPage:number = 15;
+
+  itemsPerPage:number = 6;
+
 
 
   
@@ -76,6 +90,7 @@ imageSrc:any="";
     console.log(this.categoryobj);*/
     console.log(data);
     this.elements.addData(data).subscribe((res:any)=> {
+
       this.loadData(this.currentPage);
     
     
@@ -84,6 +99,14 @@ imageSrc:any="";
   deleteItem(data:any){
     this.elements.deleteData(data).subscribe((res:any)=> {
     this.loadData(this.currentPage);
+
+   
+      });
+  }
+  deleteItem(data:any){
+    this.elements.deleteData(data).subscribe((res:any)=> {
+    // this.loadData(this.currentPage);
+
     }),
     console.error();
   }

@@ -1,4 +1,4 @@
-
+<app-navbar></app-navbar>
 
     <nav class="navbar navbar-expand-lg bg-body-light">
     <div class="container-fluid ship-status">
@@ -44,8 +44,8 @@
                         <input type="text" class="form-control mt-2 bg-light" id="inputAddress" placeholder="Esther Ro">
                       </div>
                       <div class="form-group">
-                        <label for="inputAddress " class="text-secondary t1">Card Number:</label>
-                        <input type="text" class="form-control mt-2 bg-light" id="inputAddress" placeholder="xxxx-xxxx-xxxx-xxxx">
+                        <label for="inputCardNumber " class="text-secondary t1">Card Number:</label>
+                        <input type="text" class="form-control mt-2 bg-light" id="inputCardNumber" placeholder="xxxx-xxxx-xxxx-xxxx">
                       </div>
                       <div class="form-group col-md-6">
                         <label for="inputDate" class="text-secondary t1">Expry Date:</label>
@@ -72,7 +72,7 @@
 
 <div class="col py-2">
   <div class="card card2" style="width: 18rem;">
-      <img class="card-img-top i2" src="../../../assets/images/Frame 290.png" alt="Card image cap">
+      <img class="card-img i2" src="{{prodata?.productImage}}" alt="Card image cap">
       <div class="card-body">
         <table class="table">
           <thead>
@@ -83,13 +83,13 @@
              
               <td>Product Total</td>
               <td></td>
-              <td>$124.50</td>
+              <td>{{prodata?.amount}}/-</td>
             </tr>
             <tr>
               
               <td>Discount</td>
               <td></td>
-              <td>%6<span class="text-muted">($12.25)</span></td>
+              <td>%10<span class="text-muted">(100/-)</span></td>
             </tr>
             <tr>
               
@@ -101,18 +101,15 @@
               
               <th class="t2" >Discount</th>
               <td></td>
-              <th class="t2">$112.25</th>
+              <th class="t2">{{prodata?.amount}}/-</th>
             </tr>
           </tbody>
         </table>
         
       </div>
-      <button type="button" class="btn btn-primary  btn1 btn-block" >Order</button>
+      <button type="button" class="btn btn-primary  btn1 btn-block" (click)="productOrdered(prodata?.id)" routerLink="/myorders/{{prodata?.id}}" >Order</button>
     </div>
 </div>
 </div>
 </div>
-
-
-
-
+<app-footer></app-footer>

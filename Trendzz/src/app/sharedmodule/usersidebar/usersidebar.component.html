@@ -1,20 +1,20 @@
 
 <ul class="nav flex-column c2 ">
     <li class="nav-item">
-        <a class="nav-link active text-black my-3" href="#"><h4>Ziya</h4></a>
+        <a class="nav-link active text-black my-3" routerLink=""><h4>Ziya</h4></a>
       </li>
       <hr style="color:rgb(226, 223, 223)">
     <li class="nav-item">
-      <a routerLink='/myorders' class="nav-link active text-black mt-3" ><h6>My Orders</h6></a>
+      <a routerLink="/myorders/:pid" class="nav-link active text-black mt-3" ><h6>My Orders</h6></a>
     </li>
     <li class="nav-item">
-      <a routerLink='/userpro' class="nav-link text-black mt-3" ><h6>Edit Profile</h6></a>
+      <a routerLink="/userpro" class="nav-link text-black mt-3" ><h6>Edit Profile</h6></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link text-black mt-3" href="#"><h6>Select a Language</h6></a>
+      <a class="nav-link text-black mt-3" routerLink=""><h6>Select a Language</h6></a>
     </li>
     <li class="nav-item">
-      <a routerLink='/useroh'class="nav-link text-black my-3" ><h6>Order History</h6></a>
+      <a routerLink="/useroh/:pid" class="nav-link text-black my-3" ><h6>Order History</h6></a>
     </li>
   </ul>
-  
+ <router-outlet></router-outlet>

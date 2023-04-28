@@ -11,6 +11,11 @@
 
 
                 <div class="col-md-8">
+
+                    <p class="text-center" style="font-weight: bold;font-size: 30px;">Add Categories</p>
+
+
+
                     <p class="text-center" style="font-weight: bold;font-size: 30px;">Add Categories</p>
 
                     <div class="search">
@@ -83,7 +88,11 @@
                   <button type="submit" style="margin-right: 330px;
       width: 232px;
       float: left;
+
       border-radius: 5px;" class="btn btn-primary"(click)="addItems(this.formValue.value)" [disabled]="this.formValue.invalid" >Add category</button>
+
+      border-radius: 5px;" class="btn btn-primary"(click)="addItems(this.formValue.value)">Add category</button>
+
               </div>
           </div>
       </div>
@@ -115,7 +124,11 @@
                     <td>{{item. categorydiscription}}</td>
                     <td><img style="width:50px;height:50px;" src="{{item.categoryimage}}"></td>
 
+
                     <td><i  data-bs-toggle="modal" data-bs-target="#exampleModaledit"  routerLink="/updatecategory/{{item.id}}"  class="fa-solid fa-square-pen"></i></td>
+
+                    <td><i data-bs-toggle="modal" data-bs-target="#exampleModal2"  class="fa-solid fa-square-pen"></i></td>
+
                     <td><i (click)="deleteItem(item.id)" class="fa-solid fa-trash-can"></i></td>
                 </tr>
                 <tr>
@@ -140,5 +153,9 @@
     </div>
 
 
-</div>
+
+
 <router-outlet></router-outlet>
+
+</div>
+
